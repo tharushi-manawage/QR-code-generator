@@ -1,0 +1,84 @@
+/* importing google font: "Poppins" */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: gray;
+}
+
+.wrapper {
+    height: 275px;
+    max-width: 475px;
+    background: whitesmoke;
+    border-radius: 10px;
+    padding: 25px 25px;
+    transition: height 0.2s ease;
+}
+
+.wrapper.active {
+    height: 500px;
+}
+
+header h1 {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+header p {
+    margin-top: 5px;
+    color: black;
+    font-size: 13px;
+}
+
+.wrapper .form {
+    margin: 20px 0 25px;
+}
+
+.form :where(input, button) {
+    width: 100%;
+    height: 55px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.form input {
+    font-size: 13px;
+    padding: 0 20px;
+    border: 1px solid gray;
+}
+
+.form button {
+    color: whitesmoke;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 13px;
+    background: gray;
+}
+
+.wrapper .qr__code {
+    display: flex;
+    opacity: 0;
+    padding: 25px 0;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid gray;
+    pointer-events: none;
+}
+
+.wrapper.active .qr__code {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s 0.05s ease;
+}
